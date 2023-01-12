@@ -33,6 +33,23 @@
         .caixa-menuprincipal li:hover{
             background-color: whitesmoke;
         }
+        .caixa-menuprincipal{
+            text-align: center;
+        }
+        a:hover{
+            color: yellow;
+            background-color: red;
+        }
+        #listadecontatos{
+            text-align: center;
+        }
+        #listadecontatos ul :first-of-type{
+            padding: 20px;
+            display: inline-block;
+        }
+        #listadecontatos ul :last-of-type{
+            display: inline-block;
+        }
     </style>   
     
     <header>
@@ -51,10 +68,15 @@
                     <a href="contato.html">Contato</a>
                 </li>
             </ul>
-        </nav>
+        </nav>&emsp;
+        <div class="caixa-pesquisa">
+            <h3 class="titulo" color="white">Pesquisa</h3>
+            <input type="text" class="texto_pesquisa">
+            <button class="botao_ok">Ok</button>
+        </div>
     </header>
 
-    <main>
+    <main id="listadecontatos">
         <h2 class="titulo">Contatos</h2>
         <p>Entre em contato conosco via</p>
         <ul>
