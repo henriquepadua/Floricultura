@@ -17,7 +17,6 @@
         #Title{
             font-size:xx-large;
             color: azure;
-            text-shadow: 10px;
             text-align: center;
         }
         body{
@@ -67,12 +66,22 @@
             text-align: center;
         }
         .caixa-post{
+            padding: 15px;
+            display: inline-block;
+            width: calc(33%-16px);
+            vertical-align: top;
             text-align: center;
+            border: 1px;
+            box-sizing: border-box;
         }
         img{
-            position: relative;
+            transition-delay: 5s;
+            transform:perspective();
+            z-index: -1;
+            border-bottom: solid yellow;
+            position:left;
             padding-left: 90px;
-            /*margin: 0 auto;*/
+            margin: 0px;
         }
         a:hover{
             color: yellow;
@@ -81,7 +90,6 @@
         .caixa-post p::first-letter{
             font-size: xx-large;
         }
-
     </style>
 
 <header>
