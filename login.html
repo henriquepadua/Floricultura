@@ -11,6 +11,22 @@
     let nome = prompt('Qual é o seu nome','Digite seu nome aqui',);
     let ConfimNome = prompt('Confirme seu nome','Digite seu nome aqui');
     alert(`Olá "${nome}" Seja Bem vindo a nossa Floricultura`);
+
+  window.onload = () => {
+    bt.onclick = () => {
+      let botao = document.getElementById("bt");
+      botao.style.textAlign = 'center';
+      botao.border = 'thin solid black';    
+    }
+  }
+
+  email.onfocus = () => {
+    exampleInputEmail1.innerHTML = 'Informe seu nome';
+  }
+
+  Senha.onfocus = () => {
+    exampleInputPassword1.innerHTML = 'Informe seu nome';
+  }
   </script>
     <style>
         *{
@@ -25,23 +41,24 @@
             position:relative;
         }
     </style>
+
     <nav class="navbar" style="background-color: green;">
         <div class="container-fluid">
           <a class="navbar-brand" href="#" style="padding: 10px;">Ruth´s Flores</a>
-        
+          <p><button id="bt">Login</button></p>
         </div>
     </nav>
     <section>
         
-        <form class="login">
+        <form class="login" action="index.html" method="post">
             <h1 style="text-align: center;padding: 50px;">Login</h1>
             <div class="mb-3" style="padding: 10px;">
-              <label for="exampleInputEmail1" class="form-label">Email Cadastrado</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="email" class="form-label">Email Cadastrado</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" autocomplete="off">
             </div>
     
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Senha Cadastrada</label>
+              <label for="Senha" class="form-label">Senha Cadastrada</label>
               <input type="password" class="form-control" id="exampleInputPassword1">
             </div>
     
@@ -53,43 +70,5 @@
             &emsp;<button type="submit" class="btn btn-primary">Login</button>
           </form>    
     </section>
-
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="loginModalLabel">Cadastro</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <div id="login-box" class="col-md-12">
-                    <form class="form--register" action="http://localhost:5500/usuario" method="post" id="form-add">
-                        <h3 class="text-center">Novo usuário</h3>
-                        <div class="form-group">
-                            <label for="login" class = "texto">Usuário</label><br>
-                            <input type="text" name="login" id="login" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="nome" class = "texto">Nome completo</label><br>
-                            <input type="text" name="nome" id="nome" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class = "texto">Email</label><br>
-                            <input type="text" name="email" id="email" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="senha" class = "texto">Senha</label><br>
-                            <input type="password" name="senha" id="senha" class="form-control">
-                        </div>
-                        <input type="submit" value="cadastrar" class="input--main__style input--button">
-                    </form>
-                </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              
-            </div>
 </body>
 </html>
