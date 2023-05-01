@@ -1,3 +1,7 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,13 +16,13 @@
     let ConfimNome = prompt('Confirme seu nome','Digite seu nome aqui');
     alert(`Olá "${nome}" Seja Bem vindo a nossa Floricultura`);
 
-  window.onload = () => {
-    bt.onclick = () => {
-      let botao = document.getElementById("bt");
-      botao.style.textAlign = 'center';
-      botao.border = 'thin solid black';    
+    window.onload = () => {
+       bt.onclick = () => {
+         let botao = document.getElementById("bt");
+         botao.style.textAlign = 'center';
+         botao.border = 'thin solid black';    
+       }
     }
-  }
 
   email.onfocus = () => {
     exampleInputEmail1.innerHTML = 'Informe seu nome';
@@ -50,7 +54,7 @@
     </nav>
     <section>
         
-        <form class="login" action="index.html" method="post">
+        <form class="login" asp-controller="Login"method="post">
             <h1 style="text-align: center;padding: 50px;">Login</h1>
             <div class="mb-3" style="padding: 10px;">
               <label for="email" class="form-label">Email Cadastrado</label>
@@ -68,7 +72,7 @@
             </div>
     
             &emsp;<button type="submit" class="btn btn-primary">Login</button>
-          </form>    
+      </form>    
     </section>
 </body>
 </html>
